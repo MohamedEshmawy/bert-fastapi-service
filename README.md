@@ -11,28 +11,16 @@ This README guides you through setting up and running the FastAPI project in Git
 
 ### 2. Environment Setup
 
-#### For Linux/Mac:
 Once your codespace is ready, set up a virtual environment and install dependencies:
 
 ```bash
 # Create a virtual environment
 python -m venv venv
-
-# Activate the virtual environment
-source venv/bin/activate
 ```
 
-#### For Windows:
-First, install the virtualenv package:
 ```bash
-# Install virtualenv package
-pip install virtualenv
-
-# Create a virtual environment
-python -m virtualenv venv
-
 # Activate the virtual environment
-.\venv\Scripts\activate
+source venv/bin/activate
 ```
 
 ```bash
