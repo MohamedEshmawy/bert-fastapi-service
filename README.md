@@ -59,9 +59,61 @@ Docker Integration
 
 Build the Docker image using:
 
+```bash
+docker build -t myapi .
+```
 
+### Docker Commands Cheat Sheet
 
-`docker build -t myapi .`
+#### Image Management
+```bash
+# Build an image from Dockerfile in current directory
+docker build -t myapi .
+
+# List all images
+docker images
+```
+
+#### Container Management
+```bash
+# Run a container (foreground)
+docker run -p 8000:80 myapi
+
+# Run a container (background)
+docker run -d -p 8000:80 myapi
+
+# Run and auto-remove when stopped
+docker run --rm -p 8000:80 myapi
+
+# Run with a specific name
+docker run -d --name myapi-container myapi
+
+# List running containers
+docker ps
+
+# List all containers (including stopped)
+docker ps -a
+
+# Access container terminal
+docker exec -it <container_id> sh
+
+# Stop a container
+docker stop <container_id>
+
+# Start a stopped container
+docker start <container_id>
+
+# Remove a container
+docker rm <container_id>
+```
+
+#### Flag Meanings
+- `-t`: Tag an image with a name
+- `-p`: Map ports (host:container)
+- `-d`: Run in detached mode (background)
+- `--rm`: Remove container when it stops
+- `-it`: Interactive terminal
+- `--name`: Assign a name to the container
 
 ### Docker Image Upload to Azure ACR
 
